@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>SKAR Musics</title>
+</head>
+
+<body class="mainContent">
+    <nav class="songListNavigation" id="navbar">
+        <i class='fa fa-list' id="navbarIcon" style="font-size:36px;" onclick="listOpen()"></i>
+        Song List
+        <!--<i class="fa fa-close"></i>-->
+    </nav>
+    <div class="content">
+        <div class="songList" id="songListId"> 
+            <div class="songDetails" id="song_0">
+                <p><span class="songNameClass"></span><span class="songDuration"></span></p><i
+                    id="0" class="fa fa-play songButton"></i>
+            </div>
+            <div class="songDetails" id="song_1">
+                <p><span class="songNameClass"></span><span class="songDuration"></span></p><i
+                id="1" class="fa fa-play songButton"></i>
+            </div>
+            <div class="songDetails" id="song_2">
+                <p><span class="songNameClass"></span><span class="songDuration"></span></p><i
+                id="2" class="fa fa-play songButton"></i>
+            </div>
+            <div class="songDetails" id="song_3">
+                <p><span class="songNameClass"></span><span class="songDuration"></span></p><i
+                id="3" class="fa fa-play songButton"></i>
+            </div>
+            <div class="songDetails" id="song_4">
+                <p><span class="songNameClass"></span><span class="songDuration"></span></p><i
+                id="4" class="fa fa-play songButton"></i>
+            </div>
+        </div>
+        <div class="playField" id="playFieldId">
+            <div class="currentSong">
+                <section class="songCover">
+                    <img id="coverSource" src="covers/0.jpg" alt="Song Banner">
+                </section>
+                <p class="playSongName" id="currentSong"></p>
+                <p class="playSongDuration"><span id="songTimeUpdate">00:00</span>/<span id="totalDuration">00:00</span></p>
+                <input type="range" name="range" id="myProgress" min="0" max="100" value="0">
+                <section class="songHandle">
+                    <i class="fa fa-step-backward" id="prev"></i>
+                    <i class="fa fa-play" id="playSong"></i>
+                    <i class="fa fa-step-forward" id="next"></i>
+                    <i class="fa fa-repeat" onclick="songOnLoop()" id="loop"></i>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

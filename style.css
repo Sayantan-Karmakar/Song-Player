@@ -1,0 +1,135 @@
+.mainContent{
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    background-image: url(covers/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+.songListNavigation{
+    display: none;
+    z-index: 1;
+    position: fixed;
+    max-height: 60px;
+    width: 100vw;
+    background-color: rgba(187, 0, 107, 0.7);
+    color: rgb(255,228,196);
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.songListNavigation>i{
+    color: rgb(255,228,196);
+    padding: 5px 20px 0 0;
+    float: right;
+}
+.content{
+    margin: 10px 0;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 95vh;
+    min-width: 95vw;
+    border: 2px solid rgb(255,228,196);
+    border-radius: 7px;
+    color: rgb(255,228,196);
+    background-color: rgba(0,0,0,0.5);
+
+
+}
+.songList{
+    border: 2px solid rgb(255,228,196);
+    border-radius: 7px;
+    padding: 3em 2em;
+}
+
+.songDetails{
+    margin: 2em 0;
+    min-width: 30vw;
+    background-color: rgba(255,255,255,0.2);
+}
+
+.playField{
+    height: 36.5em;
+    min-width: 35vw;
+}
+.songDetails, .playField{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(255,228,196);
+    border-radius: 7px;
+    letter-spacing: 5px;
+    font-weight: 800;
+}
+
+.songDetails i {
+    position: absolute;
+    right: 5px;
+}
+
+.currentSong{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.songCover img {
+    height: 18rem;
+    width: 18rem;
+    border-radius: 50px;
+}
+
+i{
+    margin: 5px;
+    cursor: pointer;
+}
+
+#myProgress{
+    width: 25vw;
+    height: 3px;
+    cursor: pointer;
+}
+
+.songHandle{
+    margin-top: 10px;
+}
+
+.playSongName {
+    font-weight: 900;
+    font-size: larger;
+}
+
+.fa-repeat:active{
+    color: #00ff00;
+}
+
+@media screen and (max-width:820px) {
+    .content{
+        display: block;
+    }
+    
+    .songList{
+        display: none;
+        border: none;
+        padding-top: 20%;
+    }
+    .content, .playField{
+        border: none;
+    }
+    .playField{
+        padding-top: 20%;
+    }
+    #myProgress{
+        width: 70vw;
+    }
+    .songHandle>i{
+        padding: 0 10px 0 10px;
+        font-size: 20px;
+    }
+}
